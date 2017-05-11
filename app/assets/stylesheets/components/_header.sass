@@ -1,0 +1,153 @@
+.header
+  position: absolute
+  width: 100%
+  z-index: 10
+  .sub_header
+    position: relative
+    color: $dark-white
+    margin: 10px 0
+    +clearfix
+    .language_box
+      float: left
+      display: inline-flex
+      text-transform: uppercase
+      font-size: 12px
+      letter-spacing: 1px
+      cursor: pointer
+    .login
+      float: right
+      position: relative
+      cursor: pointer
+      .svg
+        width: 30px
+        position: absolute
+        left: -30px
+        top: -4px
+        transition: 0.3s
+        svg
+          fill: $grey-color
+      .text
+        font-size: 12px
+        text-transform: uppercase
+        letter-spacing: 1px
+        transition: 0.5s
+      &:hover
+        svg
+          fill: $white-color
+        .text
+          color: $white-color
+  .general_header
+    position: relative
+    background-color: $white-color
+    +clearfix
+    .logo
+      position: absolute
+      top: 20px
+      left: 15px
+      width: 100px
+      cursor: pointer
+      svg
+        *
+          fill: $red-color
+        .logo_text
+          transition: all 0.2s
+          opacity: 0
+      &:hover
+        .logo_text
+          transition: all 0.4s
+          opacity: 1
+
+
+    .menu
+      display: inline-block
+      margin: 0 auto 
+      float: right
+      overflow: hidden
+      .header_link
+        margin: 0px 20px
+        font-size: 14px
+        letter-spacing: 1px
+        text-transform: uppercase
+        display: inline-block
+        text-decoration: none
+        color: $dark-color
+        font-weight: 700
+        opacity: 1
+        border-bottom: 3px solid transparent
+        line-height: 77px
+        position: relative
+        z-index: 5
+        transition: 1.8s
+        &:before
+          content: ""
+          position: absolute
+          background-color: $red-color
+          height: 80px
+          width: 100%
+          transform: translate(0,100%)
+          // transition: 1.3s
+          z-index: -1
+          transform-origin: 50% 50%
+        &:hover
+          &:before
+            animation: headers-anim 1s forwards
+        +breakpoint(large down)
+          display: none
+
+
+      .menu-button 
+        float: right 
+        cursor: pointer 
+        position: relative 
+        z-index: 1 
+        width: 50px 
+        height: 70px 
+        padding: 12px 
+        margin: 25px 10px 0 -10px
+        display: none
+        +breakpoint(large down)
+          display: block  
+        +breakpoint(small only)
+          height: 55px
+          margin: 15px 10px 0 -10px
+        
+        .menu-button-lines 
+          +burger(25px, 3px, 3px, $red-color, 1px) 
+          position: absolute 
+        &:hover 
+          .menu-button-lines 
+            &, &::before, &::after 
+            // background-color: $dark-color 
+            &:before 
+        &.opened 
+          .menu-button-lines 
+            +burger-to-cross 
+            &::before, &::after 
+              background-color: $red-color  
+          &:hover 
+            .menu-button-lines 
+              &::before, &::after
+
+// ul.topnav ul
+//   display: none
+//   position: absolute
+//   top: 60px
+// ul.topnav li
+//   &:hover > ul
+//     display: initial
+
+.social_svg
+  display: inline-flex
+  position: relative
+  top: 9px
+  right: 15px
+  padding-left: 16px
+
+  .svg
+    padding-right: 10px
+    svg
+      width: 30px
+  +breakpoint(large down)
+    display: none
+    &.block
+      display: block

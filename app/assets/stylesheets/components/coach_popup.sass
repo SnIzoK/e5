@@ -1,0 +1,143 @@
+.popup_wrap
+  position: fixed
+  width: 100%
+  height: 100%
+  overflow: auto
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s
+  z-index: 100
+  &.active
+    opacity: 1
+    pointer-events: initial
+
+  +breakpoint(small only)
+
+
+  .popup-close-button
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+    z-index: 2
+    svg
+      fill: $red-color
+
+  .popup-overlay
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0,0,0,0.9)
+
+  .popup_content
+    position: relative
+    top: 50%
+    transform: translate(0,-50%)
+    +breakpoint(small only)
+      top: 10%
+      transform: translate(0,0)
+      // margin-bottom: 100px
+    .prev-slide
+      height: 30px
+      width: 50px
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      background: #414141
+      z-index: 111
+      cursor: pointer
+      svg
+        transform: rotate(180deg) translate(-50%,-30%)
+        width: 20px
+        *
+          fill: $red-color
+          line 
+            stroke: $red-color !important
+        
+    .next-slide
+      height: 30px
+      width: 50px
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(0,-50%)
+      background: #414141
+      z-index: 111
+      cursor: pointer
+      svg
+        transform: translate(50%,40%)
+        width: 20px
+        *
+          fill: $red-color
+          line 
+            stroke: $red-color !important
+
+
+    .img_coach
+      position: relative
+      padding-bottom: 120%
+      +breakpoint(small only)
+        .bg-img
+          width: 70%
+          left: 50%
+          transform: translate(-50%,0)
+    .links
+      color: $white-color
+      padding-right: 10px
+      padding-top: 10px
+      font-weight: 700
+      span
+        color: $red-color
+
+    
+    .head_title
+      font-size: 98px
+      z-index: 10
+      position: absolute
+      left: 50%
+      transform: translate(-50%,0)
+      color: $red-color
+    .work_box
+      border-left: 2px solid $red-color
+      margin-bottom: 30px
+      margin-top: 120px
+      .text
+        padding: 0 0 10px 10px
+        color: $white-color
+        text-transform: uppercase
+        span
+          color: $grey-color
+    .sub_title
+      padding-bottom: 20px
+      color: $white-color
+      span
+        color: $red-color
+    +breakpoint(small only)
+      .next-slide
+        top: 20%
+        height: 50px
+        svg
+          transform: translate(50%,100%)
+      .prev-slide
+        top: 20%
+        height: 50px
+        svg
+          transform: rotate(180deg) translate(-50%,-100%)
+      .links_box
+        position: absolute
+        bottom: 70px
+        .links
+          font-size: 18px
+          padding-right: 20px
+      .head_title
+        font-size: 50px
+        bottom: 57%
+        text-align: center
+      .sub_title
+        &:last-child
+          padding-bottom: 150px
+        // position: absolute
+        // bottom: 50px

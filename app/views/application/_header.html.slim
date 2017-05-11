@@ -1,0 +1,36 @@
+.header  
+  .row
+    .columns
+      .sub_header
+        .language_box
+          .language eng &nbsp;&nbsp;/&nbsp;&nbsp;
+          .language рус &nbsp;&nbsp;/&nbsp;&nbsp;
+          .language укр 
+
+        .login
+          .svg
+            = inline_svg "svg/account.svg"
+          .text войти
+
+
+      .general_header
+        .logo
+          = inline_svg "svg/e5-logo-full-v1.svg"
+
+        .menu
+          a.header_link href="/" О нас
+          a.header_link href="/" События
+          a.header_link href="/" Мы предлагаем
+          a.header_link href="/" Видео-курсы
+          a.header_link href="/" Библиотека
+          a.header_link href="/" Контакты
+
+          .social_svg
+            a.svg href="/"
+              = inline_svg "svg/e5-social-fb-v1.svg"
+            a.svg href="/"
+              = inline_svg "svg/e5-social-tw-v1.svg"
+            a.svg href="/"
+              = inline_svg "svg/e5-social-ln-v1.svg"
+          .menu-button  
+            .menu-button-lines

@@ -1,0 +1,183 @@
+.footer
+  height: 100%
+  width: 100%
+  color: $white-white
+  padding: 10px
+  position: relative
+  background: $dark-color
+  .footer_content
+    padding: 30px 0
+  .content_columns_footer
+    position: relative
+    // padding-top: 30px
+    &.dispaly_none
+    .svg_logo
+      padding-bottom: 20px
+      svg
+        width: 150px
+    +breakpoint(small only)
+      padding-bottom: 50px
+      &.dispaly_none
+        display: none
+    .sub_titles_box
+      .sub_title
+        padding-bottom: 10px
+        color: $red-color
+        span
+          color: $white-white
+          padding-left: 10px
+      +breakpoint(small only)
+        position: absolute
+        top: 0
+        right: 20px
+
+    .title
+      font-size: 21px
+      color: $white-white
+      text-transform: uppercase
+      padding-left: 10px
+    .red_line
+      background: $red-color
+      height: 15px
+      width: 150px
+      margin-top: -10px
+      &.small_line
+        width: 100px
+    ul
+      padding-top: 30px
+      .list
+        padding: 15px 0 0
+        cursor: pointer
+        transition: 0.5s
+        font-size: 14px
+        &:hover
+          color: $red-color
+    .projects_content
+      padding-top: 30px
+    .projects_box 
+      margin-bottom: 30px
+      // margin-top: 30px
+      width: 100%
+      border-bottom: 1px solid rgba($grey-color,0.2)
+      cursor: pointer
+      .text
+        text-transform: uppercase
+        color: $white-white
+        font-weight: 600
+        transition: 0.3s
+        svg
+          width: 20px
+          margin-left: 10px
+          opacity: 0
+          transform: translate(0,0)
+          transition: 0.5s
+          *
+            fill: $red-color
+            line 
+              stroke: $red-color !important
+      .sub_title
+        color: $grey-color
+        padding-top: 5px
+        transition: 1s
+        span
+          color: $grey-color
+          transition: 1s
+        .line
+          color: $grey-color
+          transition: 1s
+      &:last-child
+        border-bottom: none
+      &:hover
+        .text
+          color: $red-color
+          svg
+            opacity: 1
+            transform: translate(50%,0)
+        .sub_title
+          color: $white-white
+          span
+            color: $white-white
+          .line
+            color: $white-white
+      // &.another_colors
+      //   .text
+      //     color: $red-color
+      //   .sub_title
+      //     color: $white-white
+      //     span
+      //       color: $white-white
+      //   .line
+      //     color: $white-white
+
+    .contacts_box
+      padding-top: 30px
+      .text
+        padding-bottom: 20px
+        color: $white-white
+        font-weight: 600
+        span
+          color: $red-color
+        &.plus
+          position: relative
+          &:before
+            content: "+"
+            display: inline-block
+            position: absolute
+            left: -12px
+            top: -1px
+            color: $grey-color
+
+    .social_svg
+      padding-top: 10px
+      // .svg
+      //   width: 40px
+
+
+  .down_footer
+    border-top: 1px solid $red-color
+    +clearfix
+    .left_patr
+      padding-top: 20px
+      float: left
+      .text
+        color: $grey-color
+        font-size: 10px
+    .right_part
+      padding-top: 15px
+      float: right
+      .footer_svg
+        display: inline-block
+        transition: 0.5s
+        vertical-align: middle
+        svg
+          width: 20px
+          height: 20px
+          *
+            fill: $grey-color
+        +breakpoint(small only)
+          display: block
+          svg
+            width: 30px
+            height: 30px
+        &:hover
+          *
+            fill: $red-color
+
+      .footer_box
+        display: inline-block
+        color: $grey-color
+        font-size: 10px
+        padding-left: 10px
+
+    +breakpoint(small only)
+      .left_patr
+        width: 80%
+      .right_part
+        width: 20%
+        .footer_box
+          display: none
+
+  
+
+
+    

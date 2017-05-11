@@ -1,0 +1,183 @@
+*
+  box-sizing: border-box
+  font-family: 'Open Sans'
+  margin: 0
+  padding: 0
+
+body
+  &.has-opened-popup
+    overflow: hidden
+    max-height: 100vh
+  // .footer 
+  //   display: none
+
+.float-left
+  +breakpoint(medium up)
+    float: left
+.float-right
+  +breakpoint(medium up)
+    float: right
+.columns_none
+  +breakpoint(small only)
+    display: none
+.bgc
+  background: $dark-color
+
+.button
+  height: 50px
+  // width: 175px
+  background-color: $red-color
+  color: $white-white
+  text-transform: uppercase
+  // margin: 0 auto
+  line-height: 30px
+  font-size: 15px
+  font-weight: bold
+  padding: 0 20px
+  // margin-bottom: 30px
+  text-decoration: none
+  cursor: pointer
+  display: block
+  letter-spacing: 1px
+  border: none
+  transition: 0.5s
+  position: relative
+  overflow: hidden
+  outline: none
+  span
+    svg
+      width: 20px
+      margin-left: 10px
+  span.black_button
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: 140%
+    font-size: 15px
+    font-weight: bold
+    padding: 10px 20px
+    letter-spacing: 1px
+    transform: translate3d(100%,0,0) skew(0deg)
+    background-color: white
+    opacity: 0
+    color: $dark-color
+    transition: transform .5s ease,opacity .3s ease
+    // border-radius: 2px
+    display: block
+    outline: none
+    overflow: hidden
+    span
+      svg
+        width: 20px
+        margin-left: 10px
+  .name_button
+    position: absolute
+    top: 9px
+    left: 15px
+    transform: translate(-10%,0)
+    opacity: 0
+    color: black
+    transition: 0.1s
+
+  &:hover
+    .black_button
+      opacity: 1
+      transform: translate3d(10%,0,0) skew(20deg)
+    .name_button
+      transform: translate(0,0)
+      opacity: 1
+      transition: 0.5s
+
+
+.head_title
+  font-size: 72px
+  font-weight: 900
+  line-height: 1
+  +breakpoint(xlarge down)
+    font-size: 60px
+  +breakpoint(small only)
+    font-size: 40px
+
+.title
+  font-size: 24px
+  font-weight: bold
+  +breakpoint(xlarge down)
+    font-size: 20px
+  +breakpoint(small only)
+    font-size: 22px
+
+.sub_title
+  font-size: 12px
+  +breakpoint(small only)
+    font-size: 14px
+
+.text
+  color: $grey-color
+  font-size: 16px
+
+.big_title
+  font-size: 36px
+  font-weight: 900
+  +breakpoint(small only)
+    font-size: 26px
+
+.name_block
+  color: $white-white
+  font-size: 48px
+  font-weight: 700
+  +breakpoint(small only)
+    font-size: 26px
+
+.bg-img
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background-position: center
+  background-size: cover
+  z-index: 10
+  +breakpoint(small only)
+    &.small_none
+      display: none
+
+.tags
+  color: $grey-color
+  padding: 20px 0 30px
+  font-size: 14px
+  svg
+    width: 16px
+    margin-right: 10px
+  span
+    position: relative
+    top: -3px
+  +breakpoint(xlarge down)
+    svg
+      width: 12px
+
+.dark_block
+  background-color: black
+
+.hidden
+  display: none
+
+a
+  text-decoration: none
+  display: inline-block
+.infowindow
+  color: green
+  text-align: center
+
+li
+  list-style: none
+
+  
+=fullsize
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
